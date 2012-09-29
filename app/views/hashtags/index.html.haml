@@ -1,31 +1,5 @@
-%link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro", :rel => "stylesheet", :type => "text/css"}
-.body
-  .three.columns
-    .sidebar
-      .logo_space
-        = link_to image_tag("tweetboxlogo.png", :width => "200"), root_path
-      .sidebar_header
-        = link_to "THE TWEETBOX", root_path
-        %br
-        - if current_user
-          = "Welcome #{current_user.twitter_name}!"
-        -else
-          = link_to image_tag("twitter_signin.png"), "/auth/twitter"
-  .row
-    .nine.columns
-      - if current_user
-        .twitter_handle
-          = "@#{current_user.twitter_name}'s"
-      .main_header
-        = link_to "tweetbox", root_path
-  .row
-    .two.columns
+= render 'layouts/nav'
+= render 'layouts/tweets'
 
-      .kbutton
-        = link_to "\##{@hashtag.text.upcase}" #link to page with all tags
-    .seven.columns
-      #container.showpage
-        - @tweets.each do |tweet|
-          .box
-            .tweets.clearfix
-              = link_to CGI.unescape(tweet.text), tweet.links.first.url
+%nav#page-nav
+  %a{href: "/#{@user.twitter_name}?page=2"}

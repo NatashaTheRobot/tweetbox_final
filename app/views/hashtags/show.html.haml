@@ -1,26 +1,5 @@
-%link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro", :rel => "stylesheet", :type => "text/css"}
-.body
-  .row
-    .nine.columns
-      .twitter_handle
-        ="@" + @user.twitter_name.upcase + "'s"
-      .main_header
-        = link_to "tweetbox", root_path
-  .row
-    .two.columns
-      .photo
-        = image_tag @user.image_url
-        = image_tag @user.image_url
-        = image_tag @user.image_url
-        = image_tag @user.image_url
-      - user_tweets = []
-      - user_urls = []
+= render 'layouts/nav'
+= render 'layouts/tweets'
 
-      .kbutton
-        = link_to "\##{@hashtag.text.upcase}" #link to page with all tags
-    .seven.columns
-      #container.showpage
-        - @tweets.each do |tweet|
-          .box
-            .tweets.clearfix
-              = link_to CGI.unescape(tweet.text), tweet.links.first.url
+%nav#page-nav
+  %a{href: "/#{@user.twitter_name}?page=2"}

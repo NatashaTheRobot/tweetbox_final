@@ -1,28 +1,5 @@
-.fixed
-  %nav.top-bar
-    %ul
-      %li
-        = image_tag @user.image_url
-      %li.name
-        = link_to "@#{@user.twitter_name}'s Tweetbox", root_path
-    %section
-      %ul.right
-        %li.welcome
-          - unless current_user
-            = link_to "Sign in with Twitter", "/auth/twitter"
-
-.row
-  .three.columns
-    %dl.nice.vertical.tabs
-      - @hashtags.each do |hashtag, num|
-        %dd
-          = link_to "\##{hashtag} (#{num})", "/#{@user.twitter_name}/#{hashtag}"
-  .nine.columns
-    - @tweets.each do |tweet|
-      .tweet
-        - #link = link_to 'httlp://t.co', tweet.links.first
-        - #CGI.unescape(tweet.text).gsub('http://t.co', link)
-        = link_to CGI.unescape(tweet.text).gsub(/http[^\s]+/, ''), tweet.links.first.url
+= render 'layouts/nav'
+= render 'layouts/tweets'
 
 %nav#page-nav
   %a{href: "/#{@user.twitter_name}?page=2"}

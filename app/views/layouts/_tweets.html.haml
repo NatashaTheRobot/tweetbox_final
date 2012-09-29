@@ -1,0 +1,15 @@
+.row
+  .three.columns
+    %dl.nice.vertical.tabs
+      - @hashtags.each do |hashtag, num|
+        - if @hashtag != nil and @hashtag.text == hashtag
+          %dd
+            .active
+              = link_to "\##{hashtag} (#{num})", "/#{@user.twitter_name}/#{hashtag}"
+        - else
+          %dd
+            = link_to "\##{hashtag} (#{num})", "/#{@user.twitter_name}/#{hashtag}"
+  .nine.columns
+    - @tweets.each do |tweet|
+      .tweet
+        = link_to tweet_text(tweet), tweet.links.first.url, :target => "_blank"
