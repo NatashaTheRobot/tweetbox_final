@@ -6,6 +6,7 @@ gem 'omniauth-twitter'
 gem 'twitter_oauth', '~> 0.4.3'
 gem 'haml', '3.1.6'
 gem 'kaminari'
+gem "rake", "0.8.7"
 
 
 group :development, :test do

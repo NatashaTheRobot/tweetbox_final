@@ -15,162 +15,162 @@
 
 @import "foundation";
 
-//-----THIS IS OUR STATIC NAV BAR
-
-.sidebar {
-//    width: 25%;
-//    padding-left: 1.5%;
-    position: fixed;
-//    z-index: 1;
-    min-height: 100%;
-//    min-width: 240px;
-    color: #000;
-    background-color: white;
-
-}
-.sidebar_header {
-    margin:10px;
-    font-family: "Source Sans Pro",sans-serif;
-    font-size: 20px;
-    text-align:center;
-    color:black;
-}
-.main_header {
-    height:100px;
-    font-family: "Source Sans Pro",sans-serif;
-    padding:10px;
-    font-size: 70px;
-    border-bottom: 1px solid #ccc;
-    color:#ccc;
-}
-.logo_space {
-//    width:300px;
-    margin-top:100px;
-    margin-right:auto;
-    margin-left:auto;
-}
-.logo {
-    background-image:url('http://i.imgur.com/SW2G8.png');
-}
-//-----THIS IS THE SCROLLING PART THAT HOUSES OUR TAGS AND TWEETS
-.nine.columns {
-//    margin-top:50px;
-//    margin-left: 10%;
-    position: relative;
-    z-index: 10;
-    background-color: #fff;
-//    border-left: 1px solid #e3e3e3;
-//  backface-visibility: visible;
-    -webkit-backface-visibility: visible;
-    -moz-backface-visibility: visible;
-
-//    min-height: 900px;
-//    z-index: 99999;
-}
-
-//----- THIS IS WHERE OUR TAGS GO
-.two.columns {
-//    width: 20%;
+////-----THIS IS OUR STATIC NAV BAR
+//
+//.sidebar {
+////    width: 25%;
+////    padding-left: 1.5%;
+//    position: fixed;
+////    z-index: 1;
+//    min-height: 100%;
+////    min-width: 240px;
+//    color: #000;
+//    background-color: white;
+//
+//}
+//.sidebar_header {
+//    margin:10px;
+//    font-family: "Source Sans Pro",sans-serif;
+//    font-size: 20px;
+//    text-align:center;
+//    color:black;
+//}
+//.main_header {
+//    height:100px;
+//    font-family: "Source Sans Pro",sans-serif;
+//    padding:10px;
+//    font-size: 70px;
+//    border-bottom: 1px solid #ccc;
+//    color:#ccc;
+//}
+//.logo_space {
+////    width:300px;
+//    margin-top:100px;
+//    margin-right:auto;
+//    margin-left:auto;
+//}
+//.logo {
+//    background-image:url('http://i.imgur.com/SW2G8.png');
+//}
+////-----THIS IS THE SCROLLING PART THAT HOUSES OUR TAGS AND TWEETS
+//.nine.columns {
+////    margin-top:50px;
+////    margin-left: 10%;
+//    position: relative;
+//    z-index: 10;
+//    background-color: #fff;
+////    border-left: 1px solid #e3e3e3;
+////  backface-visibility: visible;
+//    -webkit-backface-visibility: visible;
+//    -moz-backface-visibility: visible;
+//
+////    min-height: 900px;
+////    z-index: 99999;
+//}
+//
+////----- THIS IS WHERE OUR TAGS GO
+//.two.columns {
+////    width: 20%;
+////    background-color:white;
+////    float:left;
+////    border-right: 1px solid #ccc;
+//    margin:10px;
+//    border-left: 1px solid #ccc;
 //    background-color:white;
+//}
+//
+////----- DUSTINS BUTTONS
+//.kbutton a {
+//     display: inline-block;
+//     font-size: 15px;
+//     line-height: 14px;
+//     border: 4px solid #f8f8f8;
+//     border-radius: 20px;
+//     -moz-border-radius: 20px;
+//     -webkit-border-radius: 20px;
+//     z-index: 999;
+//     padding: 7px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     color: #999;
+//     margin-left: -15px;
+//     font-weight: 600;
+//     position: relative;
+//     text-decoration:none;
+//     background-color:white;
+//     margin-left:10px;
+// }
+//
+//.kbutton a:hover {
+//     color: #00a5a3;
+//     border-color: #00a5a3;
+// }
+//
+////----- HELP HELP HELP!! border: 4px solid #00a5a3;
+//
+////----- THIS IS WHERE OUR TWEETS GO
+//.seven.columns {
+////   width: 75%;
+//   background-color:white;
+//   float:left;
+////   padding:20px;
+//   border-left: 1px solid #ccc;
+//    background-color:white;
+//}
+//
+//
+//#container {
+//    width: 1000px;
+//    margin: 0 auto;
+//}
+//
+//
+//.bottom_border {
+//    border-bottom: 1px solid #ccc;
+//}
+//
+//.twitter_handle {
 //    float:left;
-//    border-right: 1px solid #ccc;
-    margin:10px;
-    border-left: 1px solid #ccc;
-    background-color:white;
-}
-
-//----- DUSTINS BUTTONS
-.kbutton a {
-     display: inline-block;
-     font-size: 15px;
-     line-height: 14px;
-     border: 4px solid #f8f8f8;
-     border-radius: 20px;
-     -moz-border-radius: 20px;
-     -webkit-border-radius: 20px;
-     z-index: 999;
-     padding: 7px;
-     padding-left: 15px;
-     padding-right: 15px;
-     color: #999;
-     margin-left: -15px;
-     font-weight: 600;
-     position: relative;
-     text-decoration:none;
-     background-color:white;
-     margin-left:10px;
- }
-
-.kbutton a:hover {
-     color: #00a5a3;
-     border-color: #00a5a3;
- }
-
-//----- HELP HELP HELP!! border: 4px solid #00a5a3;
-
-//----- THIS IS WHERE OUR TWEETS GO
-.seven.columns {
-//   width: 75%;
-   background-color:white;
-   float:left;
-//   padding:20px;
-   border-left: 1px solid #ccc;
-    background-color:white;
-}
-
-
-#container {
-    width: 1000px;
-    margin: 0 auto;
-}
-
-
-.bottom_border {
-    border-bottom: 1px solid #ccc;
-}
-
-.twitter_handle {
-    float:left;
-    margin-top:30px;
-    margin-right:20px;
-    margin-bottom:20px;
-    margin-left:-20px;
-    padding:10px;
-    background-color:#00aca3;
-    border: 1px solid #ccc;
-    font-family: "Source Sans Pro",sans-serif;
-    font-size: 20px;
-    text-align:center;
-    color:white;
-}
-.twitter_handle a:hover {
-     color: #00a5a3;
-     border-color: #00a5a3;
-}
-
-.showpage {
-    .box {
-    border-bottom:2px solid #ccc;
-    font-size:24px;
-    padding:15px;
-    margin: 5px 1px 5px 1px;
-    border-radius: 0px ;
-//    width:90%;
-    color: #ccc;
-    font-family: "Source Sans Pro",sans-serif; }
-
-    .box a{
-        font-size:20px;
-    }
-
-    .box:hover{
-        border:3px solid #7EB3CD;
-        box-shadow: 5px 5px 5px #7EB3CD;
-    }
-
-}
-
-
+//    margin-top:30px;
+//    margin-right:20px;
+//    margin-bottom:20px;
+//    margin-left:-20px;
+//    padding:10px;
+//    background-color:#00aca3;
+//    border: 1px solid #ccc;
+//    font-family: "Source Sans Pro",sans-serif;
+//    font-size: 20px;
+//    text-align:center;
+//    color:white;
+//}
+//.twitter_handle a:hover {
+//     color: #00a5a3;
+//     border-color: #00a5a3;
+//}
+//
+//.showpage {
+//    .box {
+//    border-bottom:2px solid #ccc;
+//    font-size:24px;
+//    padding:15px;
+//    margin: 5px 1px 5px 1px;
+//    border-radius: 0px ;
+////    width:90%;
+//    color: #ccc;
+//    font-family: "Source Sans Pro",sans-serif; }
+//
+//    .box a{
+//        font-size:20px;
+//    }
+//
+//    .box:hover{
+//        border:3px solid #7EB3CD;
+//        box-shadow: 5px 5px 5px #7EB3CD;
+//    }
+//
+//}
+//
+//
 .newpage {
         .box {
             border:1px solid gray;
@@ -196,4 +196,7 @@
         }
 }
 
-
+.tweet {
+  padding: 10px;
+  font-size: 20px;
+}
