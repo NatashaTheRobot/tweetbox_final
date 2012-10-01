@@ -7,16 +7,19 @@
         = "@#{@user.twitter_name}"
       .section
         %ul
-          - @hashtags_with_nums.each do |hashtag, num|
+          - @hashtags_with_tweets.each do |hashtag, tweets|
             %li.home_nav_item
-              %a{:href => "\##{hashtag}"}
+              %a{href: "\##{hashtag}"}
                 \##{"#{hashtag}"}
-                %span.unread= "#{num}"
+                %span.unread= "#{tweets.length}"
       .cb
   .nine.columns
     - @hashtags_with_tweets.each do |hashtag, tweets|
       %h2{id: hashtag}
-        = "##{hashtag}"
+        - if hashtag == 'untagged'
+          = "untagged"
+        - else
+          = "##{hashtag}"
       -tweets.each do |tweet|
         .tweet
           = link_to tweet_text(tweet), tweet.links.first.url, :target => "_blank"

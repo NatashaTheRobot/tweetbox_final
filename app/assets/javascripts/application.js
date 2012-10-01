@@ -202,35 +202,29 @@ $(function(){
 
 }(jQuery, this));
 
-;(function ($, window, undefined) {
-    'use strict';
+$(document).ready(function(){
 
-    $.fn.foundationNavigation = function (options) {
+    // hide #back-top first
+    $("#back-top").hide();
 
-        var lockNavBar = false;
-        // Windows Phone, sadly, does not register touch events :(
-        if (Modernizr.touch || navigator.userAgent.match(/Windows Phone/i)) {
-            $(document).on('click.fndtn touchstart.fndtn', '.nav-bar a.flyout-toggle', function (e) {
-                e.preventDefault();
-                var flyout = $(this).siblings('.flyout').first();
-                if (lockNavBar === false) {
-                    $('.nav-bar .flyout').not(flyout).slideUp(500);
-                    flyout.slideToggle(500, function () {
-                        lockNavBar = false;
-                    });
-                }
-                lockNavBar = true;
-            });
-            $('.nav-bar>li.has-flyout', this).addClass('is-touch');
-        } else {
-            $('.nav-bar>li.has-flyout', this).hover(function () {
-                $(this).children('.flyout').show();
-            }, function () {
-                $(this).children('.flyout').hide();
-            });
-        }
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#back-top').fadeIn();
+            } else {
+                $('#back-top').fadeOut();
+            }
+        });
 
-    };
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
 
-})( jQuery, this );
+});
 

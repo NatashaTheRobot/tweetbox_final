@@ -1,6 +1,10 @@
 = render 'layouts/nav'
+#top
 = render 'layouts/tweets'
 
-%nav#page-nav
-  %a{href: "/#{@user.twitter_name}?page=2"}
-
+.row
+  .two.columns.offset-by-ten
+    %p#back-top
+      %a{:href => "#top"}
+        %span>
+        Back to Top
