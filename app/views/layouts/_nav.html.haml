@@ -1,12 +1,12 @@
-.fixed
-  %nav.top-bar
-    %ul
-      %li
-        = image_tag @user.image_url
-      %li.name
-        = link_to "@#{@user.twitter_name}'s Tweetbox", user_path(@user.twitter_name)
-    %section
-      %ul.right
-        %li.welcome
-          - unless current_user
-            = link_to "Sign in with Twitter", "/auth/twitter"
+%nav.top-bar
+  %ul
+    %li.name
+      %h1
+        = link_to "The Tweetbox", root_path
+  %section
+    %ul.right
+      - if current_user
+        %li
+          = link_to "Welcome @#{current_user.twitter_name}!", user_path(current_user.twitter_name)
+      - else
+        = link_to "Sign in with Twitter", "/auth/twitter"

@@ -9,7 +9,7 @@ class HashtagsController < ApplicationController
       end
     end
 
-    @hashtags = hashtags_with_nums(@tweets)
+    @hashtags = hashtags_with_nums(@user.tweets)
 
   end
 
@@ -18,6 +18,6 @@ class HashtagsController < ApplicationController
     @hashtags = Hashtag.all
     @hashtag = Hashtag.find_by_text(params[:hashtag])
     @tweets = @hashtag.tweets
-    @hashtags = hashtags_with_nums(@tweets)
+    @hashtags = hashtags_with_nums(Tweet.all)
   end
 end

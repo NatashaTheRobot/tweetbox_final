@@ -1,14 +1,18 @@
 .row
-  .three.columns
-    %dl.nice.vertical.tabs
-      - @hashtags.each do |hashtag, num|
-        - if @hashtag != nil and @hashtag.text == hashtag
-          %dd
-            .active
-              = link_to "\##{hashtag} (#{num})", "/#{@user.twitter_name}/#{hashtag}"
-        - else
-          %dd
-            = link_to "\##{hashtag} (#{num})", "/#{@user.twitter_name}/#{hashtag}"
+  .three.columns.sidebar
+    .sidebar-module
+      .section.header
+        .pic
+          = image_tag @user.image_url
+        = "@#{@user.twitter_name}"
+      .section
+        %ul
+          - @hashtags.each do |hashtag, num|
+            %li.home_nav_item
+              %a{:href => "\##{hashtag}"}
+                \##{"#{hashtag}"}
+                %span.unread= "#{num}"
+      .cb
   .nine.columns
     - @tweets.each do |tweet|
       .tweet

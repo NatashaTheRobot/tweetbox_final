@@ -58,3 +58,19 @@
 // $base-size: 14px 44px;
 
 @import 'foundation';
+
+
+.sidebar-module .header .name,.sidebar-module.startup .header .name {
+  min-height:28px;
+}
+
+.sidebar-module .header .name a,.sidebar-module.startup .header .name a {
+  position:relative;
+  top:5px;
+  color:#333;
+  font-weight:700;
+}
+
+.sidebar-module .header .name a:hover,.sidebar-module.startup .header .name a:hover {
+  text-decoration:none;
+}
